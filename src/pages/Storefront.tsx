@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
 import { CoiledForm } from '../components/CoiledForm'
+import { CollectionTile } from '../components/CollectionTile'
+import { ProductCard } from '../components/ProductCard'
 import { collections } from '../data/collections'
+import { featuredProducts } from '../data/products'
 import { storefront } from '../data/pages'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
 
@@ -38,16 +41,19 @@ export default function Storefront() {
       <section aria-label="Collections" className="px-6 pb-24 md:pb-32">
         <div className="mx-auto grid max-w-6xl gap-px bg-bone/10 sm:grid-cols-2 lg:grid-cols-5">
           {collections.map((collection) => (
-            <div
-              key={collection.slug}
-              className="flex flex-col gap-3 bg-ground p-8"
-            >
-              <h2 className="font-display text-xl">{collection.name}</h2>
-              <p className="text-sm leading-relaxed text-bone-dim">
-                {collection.line}
-              </p>
-            </div>
+            <CollectionTile key={collection.slug} collection={collection} />
           ))}
+        </div>
+      </section>
+
+      <section aria-label="Featured" className="border-t border-bone/10 px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="font-display text-3xl">Featured</h2>
+          <div className="mt-12 grid gap-px bg-bone/10 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredProducts.map((product) => (
+              <ProductCard key={product.slug} product={product} />
+            ))}
+          </div>
         </div>
       </section>
 
