@@ -1,8 +1,9 @@
 {
-  // Cloudflare Workers config — serves the repo root as static assets.
+  // Cloudflare Workers — Vite build output served as static assets, SPA fallback.
   "name": "cobrarose-store",
   "compatibility_date": "2026-08-12",
   "assets": {
-    "directory": "./"
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
   }
 }
