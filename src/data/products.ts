@@ -8,8 +8,26 @@ export type Register = 'object' | 'capacity' | 'returned'
 /** Permitted price strings only — no real figure, ever. */
 export type Price = '£—' | '£0.00' | 'Not priced' | 'By enquiry'
 
-/** SVG slot reference — interim line-art system while photography is parked. */
-export type ArtSlot = 'object' | 'capacity' | 'returned' | 'rope'
+/**
+ * SVG slot reference — interim line-art system while photography is parked.
+ * Register motifs ('object', 'capacity', 'returned', 'rope') plus one unique
+ * silhouette slot per `object` product (v4 art pass).
+ */
+export type ArtSlot =
+  | 'object'
+  | 'capacity'
+  | 'returned'
+  | 'rope'
+  | 'length-of-jute'
+  | 'blindfold'
+  | 'salt'
+  | 'cuff-leather-lined'
+  | 'candle-low-temperature'
+  | 'oil-unscented'
+  | 'key'
+  | 'silk-2m'
+  | 'cane'
+  | 'cup'
 
 export interface ProductCta {
   label: string
@@ -44,7 +62,7 @@ export const products: Product[] = [
     register: 'object',
     price: '£—',
     stock: '8–12 available',
-    art: 'rope',
+    art: 'length-of-jute',
     body: [
       'Natural fibre, 6mm, broken in. Holds a knot without slipping and marks skin without breaking it. Coarse enough to be felt through the whole hand.',
     ],
@@ -93,7 +111,7 @@ export const products: Product[] = [
     register: 'object',
     price: '£—',
     stock: '8–12 available',
-    art: 'object',
+    art: 'blindfold',
     body: [
       'Padded silk, no light leak at the bridge. Sits without pressure on the eye.',
     ],
@@ -127,7 +145,7 @@ export const products: Product[] = [
     register: 'object',
     price: '£—',
     stock: 'In stock',
-    art: 'object',
+    art: 'salt',
     body: [
       'Coarse, unrefined, grey. For the bath, after.',
       'This one is exactly what it says.',
@@ -159,7 +177,7 @@ export const products: Product[] = [
     register: 'object',
     price: '£—',
     stock: '8–12 available',
-    art: 'rope',
+    art: 'cuff-leather-lined',
     body: [
       'Vegetable-tanned, fleece-lined, single buckle. Sized generously — circulation matters more than aesthetics and always will.',
       'Sold in pairs. The single buckle is deliberate: one hand can release it, including the hand wearing it.',
@@ -192,7 +210,7 @@ export const products: Product[] = [
     register: 'object',
     price: '£—',
     stock: '8–12 available',
-    art: 'object',
+    art: 'candle-low-temperature',
     body: [
       'Paraffin-free, low melting point, unscented. Burns at a temperature that registers clearly on skin without injuring it.',
       'Unscented is not an omission. Fragrance is an additional variable and this is not the practice to add variables to.',
@@ -224,7 +242,7 @@ export const products: Product[] = [
     register: 'object',
     price: '£—',
     stock: 'In stock',
-    art: 'object',
+    art: 'oil-unscented',
     body: [
       'Cold-pressed, single ingredient, no additives. Warms in the hand.',
       'A straight listing.',
@@ -257,7 +275,7 @@ export const products: Product[] = [
     register: 'object',
     price: '£—',
     stock: '8–12 available',
-    art: 'object',
+    art: 'key',
     body: [
       'Steel. Unmarked. Kept within reach of the person restrained, not the person restraining.',
     ],
@@ -291,7 +309,7 @@ export const products: Product[] = [
     register: 'object',
     price: '£—',
     stock: 'In stock',
-    art: 'rope',
+    art: 'silk-2m',
     body: [
       'Habotai, 8mm, hemmed. Soft enough to be used where jute should not be, and unsuitable for anything load-bearing.',
       'Included in the catalogue because women reach for rope before they need rope. This is the correct answer for roughly the first two months.',
@@ -323,7 +341,7 @@ export const products: Product[] = [
     register: 'object',
     price: '£—',
     stock: '8–12 available',
-    art: 'object',
+    art: 'cane',
     body: [
       'Rattan, 8mm, 60cm, unlacquered. Flexible along its length.',
       'Listed with its technical specification and nothing else, because the technique matters more than the object and the technique is not something a catalogue can teach. It is taught in weeks nine through twelve, in person, with supervision.',
@@ -339,7 +357,7 @@ export const products: Product[] = [
     register: 'object',
     price: '£—',
     stock: 'In stock',
-    art: 'object',
+    art: 'cup',
     body: ['Stoneware, unglazed exterior, holds 300ml. Heavy for its size.'],
     purpose:
       'afterwards. Something warm, held in two hands, while the nervous system does what it does over the following forty minutes. The weight is deliberate — an object that requires two hands is an object that stops you doing anything else.',

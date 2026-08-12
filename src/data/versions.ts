@@ -6,6 +6,11 @@ export interface VersionEntry {
 
 export const versions: VersionEntry[] = [
   {
+    version: 'v4',
+    date: '2026-08-12',
+    note: 'Art pass: per-product single-stroke silhouettes, draw-on animation, hero rope coil.',
+  },
+  {
     version: 'v3',
     date: '2026-08-12',
     note: 'Furniture pages: returns, aftercare, cart, about, threshold, terms, privacy. Site complete.',
