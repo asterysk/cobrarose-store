@@ -6,6 +6,11 @@ export interface VersionEntry {
 
 export const versions: VersionEntry[] = [
   {
+    version: 'v6',
+    date: '2026-08-12',
+    note: 'Favicon set: coil mark across svg, png, apple-touch and manifest.',
+  },
+  {
     version: 'v5',
     date: '2026-08-12',
     note: 'Stories: counter vignettes on returned products, /stories scenario library.',
