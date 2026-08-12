@@ -4,6 +4,7 @@ import { footerCopy } from '../../data/pages'
 const footerLinks = [
   { label: 'Returns', to: '/returns' },
   { label: 'Aftercare', to: '/aftercare' },
+  { label: 'Stories', to: '/stories' },
   { label: 'Terms', to: '/terms' },
   { label: 'Privacy', to: '/privacy' },
 ] as const

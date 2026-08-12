@@ -8,6 +8,7 @@ const Storefront = lazy(() => import('./pages/Storefront'))
 const CollectionsIndex = lazy(() => import('./pages/CollectionsIndex'))
 const CollectionPage = lazy(() => import('./pages/CollectionPage'))
 const ProductPage = lazy(() => import('./pages/ProductPage'))
+const StoriesPage = lazy(() => import('./pages/StoriesPage'))
 const Versions = lazy(() => import('./pages/Versions'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
@@ -52,6 +53,7 @@ export const router = createBrowserRouter([
       { path: '/collections', element: lazyPage(<CollectionsIndex />) },
       { path: '/collections/:slug', element: lazyPage(<CollectionPage />) },
       { path: '/product/:slug', element: lazyPage(<ProductPage />) },
+      { path: '/stories', element: lazyPage(<StoriesPage />) },
       { path: '/returns', element: lazyPage(<furniture.Returns />) },
       { path: '/aftercare', element: lazyPage(<furniture.Aftercare />) },
       { path: '/cart', element: lazyPage(<furniture.Cart />) },

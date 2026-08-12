@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import type { FurniturePage } from '../data/pages'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
 
@@ -76,6 +77,15 @@ export default function FurniturePageView({ page }: { page: FurniturePage }) {
 
             {section.after && (
               <p className="mt-8 leading-relaxed">{section.after}</p>
+            )}
+
+            {section.link && (
+              <Link
+                to={section.link.to}
+                className="mt-8 inline-block text-sm text-bone-dim transition-colors hover:text-bone"
+              >
+                {section.link.label}
+              </Link>
             )}
 
             {section.pullquote && (

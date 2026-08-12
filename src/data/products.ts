@@ -45,6 +45,9 @@ export interface Product {
   body: string[]
   /** Optional. Opens "What it is actually for:" */
   purpose?: string
+  /** Optional counter vignette (stories copy Part 1) — only the four
+   *  `returned`-register products carry one. */
+  vignette?: string[]
   care: string
   returns: string
   badge: 'Mockup — not for sale'
@@ -102,6 +105,10 @@ export const products: Product[] = [
     ],
     care: 'Not applicable — this item is being returned, not kept.',
     returns: 'This is the return.',
+    vignette: [
+      'She emptied her bag onto the counter without being asked. Sorry for emailing twice. Sorry for the delay, which was not hers. Sorry for sitting down, sorry for the chair being where it was, sorry for taking a moment to find the words she had already found.',
+      'We did not count them. We never count them. She watched her hands while it happened, as if they belonged to someone who used to do this.',
+    ],
     badge: BADGE,
   },
   {
@@ -168,6 +175,10 @@ export const products: Product[] = [
     ],
     care: 'Not applicable.',
     returns: 'Accepted. Bring the whole set.',
+    vignette: [
+      'It came off slowly. It had been fitted early and well, by someone who meant something else by it, and the fittings had held for years — through rooms that deserved it and rooms that did not.',
+      'She tried to hand it over folded. It does not fold. We took it as it was, and she stood there a moment with her face doing nothing at all, which is harder than it sounds, and which is the beginning.',
+    ],
     badge: BADGE,
   },
   {
@@ -233,6 +244,10 @@ export const products: Product[] = [
     ],
     care: 'Keep it. Some rooms still require it. The work is choosing, not discarding.',
     returns: 'Partial returns accepted.',
+    vignette: [
+      'She brought back most of it. The rise at the end of sentences. The half-step up when asking for what was already hers. The speed, which had once kept her safe and now only kept her vague.',
+      'She kept a little. Some rooms still require it, and the work was never to disarm her — only to make the softening a choice she makes rather than a place she lives.',
+    ],
     badge: BADGE,
   },
   {
@@ -300,6 +315,10 @@ export const products: Product[] = [
     care: 'Not applicable.',
     returns:
       'Accepted. Expansion is not sold here — it happens on its own once this is handed in.',
+    vignette: [
+      'She had practised it so long she no longer felt it happen. Shoulders first. Then the breath. Then the careful arrangement of herself into the space other people had finished with.',
+      'It came in unusually good condition, given the mileage. We checked it in without comment. On her way out she held the door for no one, because no one was behind her, and stood in the doorway a full second longer than she needed to.',
+    ],
     badge: BADGE,
   },
   {

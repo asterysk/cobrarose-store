@@ -51,6 +51,8 @@ export interface PageSection {
   /** Closing line rendered after a table (e.g. About, five threads). */
   after?: string
   pullquote?: string
+  /** Quiet text link rendered at the end of the section (internal path). */
+  link?: { label: string; to: string }
 }
 
 export interface FurniturePage {
@@ -189,6 +191,10 @@ export const aboutPage: FurniturePage = {
       body: [
         'Cobra Rose is a sixteen-week programme in embodiment and erotic sovereignty, run in cohorts of eight to twelve women, entered by invitation. This site is a catalogue. It sells nothing.',
       ],
+      link: {
+        label: 'Six women who do not exist, and where they begin →',
+        to: '/stories',
+      },
     },
     {
       heading: 'What the work is.',

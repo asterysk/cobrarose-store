@@ -6,6 +6,11 @@ export interface VersionEntry {
 
 export const versions: VersionEntry[] = [
   {
+    version: 'v5',
+    date: '2026-08-12',
+    note: 'Stories: counter vignettes on returned products, /stories scenario library.',
+  },
+  {
     version: 'v4',
     date: '2026-08-12',
     note: 'Art pass: per-product single-stroke silhouettes, draw-on animation, hero rope coil.',

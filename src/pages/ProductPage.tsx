@@ -60,6 +60,18 @@ export default function ProductPage() {
         </p>
       )}
 
+      {product.vignette && (
+        <aside className="mt-12 space-y-6 text-[0.95rem] leading-relaxed text-bone-dim">
+          <h2 className="font-display text-xl text-bone">At the counter.</h2>
+          {product.vignette.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+          <p className="text-xs text-bone-dim/70 italic">
+            A composite, not a testimony.
+          </p>
+        </aside>
+      )}
+
       <dl className="mt-12 space-y-6 border-t border-bone/10 pt-10 text-sm leading-relaxed">
         <div>
           <dt className="inline font-display text-base">Care: </dt>
