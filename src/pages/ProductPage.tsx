@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import { collectionBySlug } from '../data/collections'
 import { productBySlug } from '../data/products'
 import { ArtMotif } from '../components/art/ArtMotif'
+import { MediaImage } from '../components/MediaImage'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
 import NotFound from './NotFound'
 
@@ -38,10 +39,27 @@ export default function ProductPage() {
         {product.name}
       </h1>
 
-      <ArtMotif
-        slot={product.art}
-        className="mt-12 h-28 w-28 text-accent md:h-36 md:w-36"
-      />
+      {product.photo ? (
+        <div className="mt-12 flex aspect-[3/2] w-full items-center justify-center overflow-hidden border border-bone/10">
+          <MediaImage
+            filename={product.photo}
+            alt={product.name}
+            eager
+            className="h-full w-full object-cover"
+            fallback={
+              <ArtMotif
+                slot={product.art}
+                className="mx-auto h-28 w-28 text-accent md:h-36 md:w-36"
+              />
+            }
+          />
+        </div>
+      ) : (
+        <ArtMotif
+          slot={product.art}
+          className="mt-12 h-28 w-28 text-accent md:h-36 md:w-36"
+        />
+      )}
 
       <p className="mt-8 text-sm text-bone-dim">
         {product.price} · {product.stock}

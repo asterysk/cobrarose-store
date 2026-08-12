@@ -42,6 +42,9 @@ export interface Product {
   price: Price
   stock: string
   art: ArtSlot
+  /** Optional photo filename on the Bunny media host (v7) — the ten
+   *  `object` products only. */
+  photo?: string
   body: string[]
   /** Optional. Opens "What it is actually for:" */
   purpose?: string
@@ -66,6 +69,7 @@ export const products: Product[] = [
     price: '£—',
     stock: '8–12 available',
     art: 'length-of-jute',
+    photo: 'length-of-jute.webp',
     body: [
       'Natural fibre, 6mm, broken in. Holds a knot without slipping and marks skin without breaking it. Coarse enough to be felt through the whole hand.',
     ],
@@ -119,6 +123,7 @@ export const products: Product[] = [
     price: '£—',
     stock: '8–12 available',
     art: 'blindfold',
+    photo: 'blindfold.webp',
     body: [
       'Padded silk, no light leak at the bridge. Sits without pressure on the eye.',
     ],
@@ -153,6 +158,7 @@ export const products: Product[] = [
     price: '£—',
     stock: 'In stock',
     art: 'salt',
+    photo: 'salt.webp',
     body: [
       'Coarse, unrefined, grey. For the bath, after.',
       'This one is exactly what it says.',
@@ -189,6 +195,7 @@ export const products: Product[] = [
     price: '£—',
     stock: '8–12 available',
     art: 'cuff-leather-lined',
+    photo: 'cuff-leather-lined.webp',
     body: [
       'Vegetable-tanned, fleece-lined, single buckle. Sized generously — circulation matters more than aesthetics and always will.',
       'Sold in pairs. The single buckle is deliberate: one hand can release it, including the hand wearing it.',
@@ -222,6 +229,7 @@ export const products: Product[] = [
     price: '£—',
     stock: '8–12 available',
     art: 'candle-low-temperature',
+    photo: 'candle-low-temperature.webp',
     body: [
       'Paraffin-free, low melting point, unscented. Burns at a temperature that registers clearly on skin without injuring it.',
       'Unscented is not an omission. Fragrance is an additional variable and this is not the practice to add variables to.',
@@ -258,6 +266,7 @@ export const products: Product[] = [
     price: '£—',
     stock: 'In stock',
     art: 'oil-unscented',
+    photo: 'oil-unscented.webp',
     body: [
       'Cold-pressed, single ingredient, no additives. Warms in the hand.',
       'A straight listing.',
@@ -291,6 +300,7 @@ export const products: Product[] = [
     price: '£—',
     stock: '8–12 available',
     art: 'key',
+    photo: 'key.webp',
     body: [
       'Steel. Unmarked. Kept within reach of the person restrained, not the person restraining.',
     ],
@@ -329,6 +339,7 @@ export const products: Product[] = [
     price: '£—',
     stock: 'In stock',
     art: 'silk-2m',
+    photo: 'silk-2m.webp',
     body: [
       'Habotai, 8mm, hemmed. Soft enough to be used where jute should not be, and unsuitable for anything load-bearing.',
       'Included in the catalogue because women reach for rope before they need rope. This is the correct answer for roughly the first two months.',
@@ -361,6 +372,7 @@ export const products: Product[] = [
     price: '£—',
     stock: '8–12 available',
     art: 'cane',
+    photo: 'cane.webp',
     body: [
       'Rattan, 8mm, 60cm, unlacquered. Flexible along its length.',
       'Listed with its technical specification and nothing else, because the technique matters more than the object and the technique is not something a catalogue can teach. It is taught in weeks nine through twelve, in person, with supervision.',
@@ -377,6 +389,7 @@ export const products: Product[] = [
     price: '£—',
     stock: 'In stock',
     art: 'cup',
+    photo: 'cup.webp',
     body: ['Stoneware, unglazed exterior, holds 300ml. Heavy for its size.'],
     purpose:
       'afterwards. Something warm, held in two hands, while the nervous system does what it does over the following forty minutes. The weight is deliberate — an object that requires two hands is an object that stops you doing anything else.',

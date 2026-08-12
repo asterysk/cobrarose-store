@@ -3,6 +3,7 @@ import { collectionBySlug, type CollectionSlug } from '../data/collections'
 import { productsInCollection, type ArtSlot } from '../data/products'
 import { ProductCard } from '../components/ProductCard'
 import { ArtMotif } from '../components/art/ArtMotif'
+import { MediaImage } from '../components/MediaImage'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
 import NotFound from './NotFound'
 
@@ -39,6 +40,19 @@ export default function CollectionPage() {
       <p className="mt-6 max-w-2xl leading-relaxed text-bone-dim">
         {collection.standfirst}
       </p>
+      <div className="mt-12 flex aspect-[21/9] w-full items-center justify-center overflow-hidden border border-bone/10">
+        <MediaImage
+          filename={collection.headerImage}
+          alt={collection.name}
+          className="h-full w-full object-cover"
+          fallback={
+            <ArtMotif
+              slot={headerMotifs[collection.slug]}
+              className="h-16 w-16 text-accent"
+            />
+          }
+        />
+      </div>
       <div className="mt-16 grid gap-px bg-bone/10 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((product) => (
           <ProductCard key={product.slug} product={product} />

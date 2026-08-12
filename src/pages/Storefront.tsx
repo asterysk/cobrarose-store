@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
 import { CoiledForm } from '../components/CoiledForm'
 import { CollectionTile } from '../components/CollectionTile'
+import { MediaImage } from '../components/MediaImage'
 import { ProductCard } from '../components/ProductCard'
 import { collections } from '../data/collections'
+import { HERO_IMAGE } from '../data/media'
 import { featuredProducts } from '../data/products'
 import { storefront } from '../data/pages'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
@@ -36,6 +38,15 @@ export default function Storefront() {
           <p>{storefront.standfirst[0]}</p>
           <p>{storefront.standfirst[1]}</p>
         </div>
+      </section>
+
+      <section aria-hidden="true" className="h-[45vh] w-full overflow-hidden">
+        <MediaImage
+          filename={HERO_IMAGE}
+          alt=""
+          className="h-full w-full object-cover object-[50%_66%]"
+          fallback={null}
+        />
       </section>
 
       <section aria-label="Collections" className="px-6 pb-24 md:pb-32">

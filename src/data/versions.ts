@@ -6,6 +6,11 @@ export interface VersionEntry {
 
 export const versions: VersionEntry[] = [
   {
+    version: 'v7',
+    date: '2026-08-12',
+    note: 'Photography: product photos, collection headers, hero band; media served from Bunny img. hostname.',
+  },
+  {
     version: 'v6',
     date: '2026-08-12',
     note: 'Favicon set: coil mark across svg, png, apple-touch and manifest.',
