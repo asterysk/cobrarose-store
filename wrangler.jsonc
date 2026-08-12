@@ -1,0 +1,8 @@
+{
+  // Cloudflare Workers config — serves the repo root as static assets.
+  "name": "cobrarose-store",
+  "compatibility_date": "2026-08-12",
+  "assets": {
+    "directory": "./"
+  }
+}
